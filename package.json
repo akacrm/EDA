@@ -1,6 +1,7 @@
 {
     "devDependencies": {
         "husky": "=4",
+        "jest": "^27.0.1",
         "lint-staged": ">=10",
         "prettier": "^2.2.1",
         "prettier-plugin-apex": "^1.8.0"
