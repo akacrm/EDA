@@ -12,8 +12,5 @@
     },
     "lint-staged": {
         "**/*.{html,js,css,yml,cls,apex,trigger}": "prettier --check"
-    },
-    "dependencies": {
-        "@salesforce/sfdx-lwc-jest": "^0.10.4"
     }
 }
