@@ -1,17 +1,20 @@
 <template>
-    <lightning-card title={labelReference.stgHealthCheckTitle}>
+    <lightning-card title={labelReference.stgHealthCheckTitle} data-id="healthCheckRunCard">
         <div class="slds-grid slds-wrap">
             <div
                 class="slds-col slds-size--2-of-2 slds-p-horizontal_small slds-p-vertical_small slds-text-body_regular"
+                data-id="healthCheckRunDescription"
             >
-                <p>{labelReference.stgHealthCheckDescription}</p>
+                {labelReference.stgHealthCheckDescription}
             </div>
 
             <div
                 class="slds-col slds-size--1-of-2 slds-text-align_left slds-text-body_small slds-p-horizontal_small slds-p-vertical_small"
+                data-id="healthCheckRunLastRunDate"
             >
                 {lastRunDate}
             </div>
+
             <div
                 class="slds-col slds-col_bump-left slds-text-align_right slds-size--1-of-2 slds-p-horizontal_small slds-p-vertical_small"
             >
@@ -19,6 +22,7 @@
                     label={labelReference.stgHealthCheckRunButton}
                     title={labelReference.stgHealthCheckRunButton}
                     onclick={runHealthCheck}
+                    data-id="healthCheckRunButton"
                 ></lightning-button>
             </div>
         </div>
