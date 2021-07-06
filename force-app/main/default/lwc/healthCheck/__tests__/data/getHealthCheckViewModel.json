@@ -1,0 +1,14 @@
+{
+    "lastRunDate": "2021-07-06",
+    "numberOfHealthChecks": 5,
+    "healthCheckDefinitionsToDisplayList": [{
+            "name": "Def VModel 1",
+            "className": "Test Class 1",
+            "namespace": "HED"
+        },
+        {
+            "name": "Def VModel 1",
+            "className": "Test Class 1",
+            "namespace": "HED"
+        }]
+}
