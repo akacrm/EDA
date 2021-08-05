@@ -1,0 +1,12 @@
+{
+    "profileViewModelList": [
+        {
+            "label": "Profile",
+            "value": "000000000000000000"
+        },
+        {
+            "label": "Profile2",
+            "value": "000000000000000001"
+        }
+    ]
+}

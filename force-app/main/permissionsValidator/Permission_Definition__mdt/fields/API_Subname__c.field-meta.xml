@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>API_Subname__c</fullName>
+    <description>The API Name of specific metadata types that require an object, such as SObject Field and Record Type</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The API Name of specific metadata types that require an object, such as SObject Field and Record Type</inlineHelpText>
+    <label>API Subname</label>
+    <length>60</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<template>
+    <ul aria-live="polite">
+        <template for:each={viewModel.featureNames} for:item="featureName">
+            <c-results-section
+                key={featureName}
+                feature-name={featureName}
+                display-mode={viewModel.displayMode}
+                selected-profile-id={viewModel.profileId}
+                selected-permission-set-id-array={viewModel.permissionSetIdArray}
+                selected-permission-set-group-id-array={viewModel.permissionSetGroupIdArray}
+            >
+            </c-results-section>
+        </template>
+    </ul>
+</template>

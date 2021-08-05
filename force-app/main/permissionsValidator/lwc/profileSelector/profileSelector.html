@@ -1,0 +1,20 @@
+<template>
+    <template if:true={showError}>
+        <c-error-display error={error}> </c-error-display>
+    </template>
+    <lightning-dual-listbox
+        name="profileSelector"
+        label={labelReference.listBoxLabel}
+        source-label={labelReference.listboxSourceLabel}
+        selected-label={labelReference.selectedLabel}
+        field-level-help={labelReference.fieldLevelHelpLabel}
+        options={options}
+        min={min}
+        max={max}
+        disable-reordering
+        show-activity-indicator={showActivityIndicator}
+        size={size}
+        onchange={handleChange}
+    >
+    </lightning-dual-listbox>
+</template>

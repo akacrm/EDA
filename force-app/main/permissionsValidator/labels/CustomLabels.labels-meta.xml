@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>accessMetDescription</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for no missing access.</shortDescription>
+        <value>The selection meets all of the required access for this feature.</value>
+    </labels>
+    <labels>
+        <fullName>allAccessMetStatus</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for when all access is met.</shortDescription>
+        <value>All access met.</value>
+    </labels>
+    <labels>
+        <fullName>apexClassAccessRequired</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Access required message for apex classes</shortDescription>
+        <value>Access is required for this apex class.</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingAPIName</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The API Name column heading for results data tables</shortDescription>
+        <value>API Name</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingDescription</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Description column heading for results data tables</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingCreate</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Create column heading for results data tables</shortDescription>
+        <value>Create</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Delete column heading for results data tables</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingEdit</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Edit column heading for results data tables</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingMetadataType</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Metadata Type column heading for results data tables</shortDescription>
+        <value>Metadata Type</value>
+    </labels>
+    <labels>
+        <fullName>dataTableHeadingRead</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Read column heading for results data tables</shortDescription>
+        <value>Read</value>
+    </labels>
+    <labels>
+        <fullName>dualListboxAvailable</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the available listbox</shortDescription>
+        <value>Available</value>
+    </labels>
+    <labels>
+        <fullName>dualListboxSelected</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the selected listbox</shortDescription>
+        <value>Selected</value>
+    </labels>
+    <labels>
+        <fullName>errorFeatureValidatorResults</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for an error loading permission validator results for a feature</shortDescription>
+        <value>Error loading results for feature: {0}.</value>
+    </labels>
+    <labels>
+        <fullName>errorInvalidPermissionDefinition</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for error when an invalid permission definition occurs</shortDescription>
+        <value>We cannot process an invalid permission definition.</value>
+    </labels>
+    <labels>
+        <fullName>errorInsufficientAccess</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for insufficient access error</shortDescription>
+        <value>You do not have the required access to view this component.</value>
+    </labels>
+    <labels>
+        <fullName>errorPermissionDefinitions</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for an error loading permission definitions</shortDescription>
+        <value>Error loading Permission Definition.</value>
+    </labels>
+    <labels>
+        <fullName>errorPermissionSetGroupSelector</fullName>
+        <categories>PermissionSetGroupSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for an error loading the permission set group selector</shortDescription>
+        <value>Error loading Permission Set Groups.</value>
+    </labels>
+    <labels>
+        <fullName>errorPermissionSetSelector</fullName>
+        <categories>PermissionSetSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for an error loading the permission set selector</shortDescription>
+        <value>Error loading Permission Sets.</value>
+    </labels>
+    <labels>
+        <fullName>errorProfileSelector</fullName>
+        <categories>ProfileSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for an error loading the profile selector</shortDescription>
+        <value>Error loading Profiles.</value>
+    </labels>
+    <labels>
+        <fullName>errorUnexpected</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for an unexpected error</shortDescription>
+        <value>An unexpected error has occurred: {0}</value>
+    </labels>
+    <labels>
+        <fullName>foundAccess</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Generic text for found access.</shortDescription>
+        <value>Found</value>
+    </labels>
+    <labels>
+        <fullName>missingAccess</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Generic text for missing access.</shortDescription>
+        <value>Missing</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessCreate</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing create access.</shortDescription>
+        <value>The following required access is missing: Create</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessCreateDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing create, delete access.</shortDescription>
+        <value>The following required access is missing: Create, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessCreateEdit</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing create, edit access.</shortDescription>
+        <value>The following required access is missing: Create, Edit</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessCreateEditDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing create, edit, delete access.</shortDescription>
+        <value>The following required access is missing: Create, Edit, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing delete access.</shortDescription>
+        <value>The following required access is missing: delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessEdit</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing edit access.</shortDescription>
+        <value>The following required access is missing: Edit</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessEditDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing edit, delete access.</shortDescription>
+        <value>The following required access is missing: Edit, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessRead</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read access.</shortDescription>
+        <value>The following required access is missing: Read</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadCreate</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, create access.</shortDescription>
+        <value>The following required access is missing: Read, Create</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadCreateDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, create, delete access.</shortDescription>
+        <value>The following required access is missing: Read, Create, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadCreateEdit</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, create, edit access.</shortDescription>
+        <value>The following required access is missing: Read, Create, Edit</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadCreateEditDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, create, edit, delete access.</shortDescription>
+        <value>The following required access is missing: Read, Create, Edit, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, delete access.</shortDescription>
+        <value>The following required access is missing: Read, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadEdit</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, create access.</shortDescription>
+        <value>The following required access is missing: Read, Create</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessReadEditDelete</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message for missing read, edit, delete access.</shortDescription>
+        <value>The following required access is missing: Read, Edit, Delete</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessStatus</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for a passed check</shortDescription>
+        <value>Access is missing.</value>
+    </labels>
+    <labels>
+        <fullName>missingAccessTableDescription</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the description for tables for missing access.</shortDescription>
+        <value>The selection is missing access for this feature:</value>
+    </labels>
+    <labels>
+        <fullName>permissionsValidator</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title for Permissions Validator</shortDescription>
+        <value>Permissions Validator</value>
+    </labels>
+    <labels>
+        <fullName>permissionSetGroupSelectorFieldLevelHelp</fullName>
+        <categories>PermissionSetGroupSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Selects Permission Set Groups to check for permissions</shortDescription>
+        <value>Select Permission Set Groups to check for permissions</value>
+    </labels>
+    <labels>
+        <fullName>permissionSetGroupSelectorPrompt</fullName>
+        <categories>PermissionSetGroupSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prompt to select Permission Set Groups</shortDescription>
+        <value>Select Permission Set Groups</value>
+    </labels>
+    <labels>
+        <fullName>permissionSetSelectorFieldLevelHelp</fullName>
+        <categories>PermissionSetSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Selects Permission Sets to check for permissions</shortDescription>
+        <value>Select Permission Sets to check for permissions</value>
+    </labels>
+    <labels>
+        <fullName>permissionSetSelectorPrompt</fullName>
+        <categories>PermissionSetSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prompt to select Permission Sets</shortDescription>
+        <value>Select Permission Sets</value>
+    </labels>
+    <labels>
+        <fullName>profileSelectorFieldLevelHelp</fullName>
+        <categories>ProfileSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Selects a Profile to check for permissions</shortDescription>
+        <value>Select a Profile to check for permissions</value>
+    </labels>
+    <labels>
+        <fullName>profileSelectorPrompt</fullName>
+        <categories>ProfileSelector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prompt to select a Profile</shortDescription>
+        <value>Select a Profile</value>
+    </labels>
+    <labels>
+        <fullName>validatorActionMenuAllAccess</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the Permissions Validator Action Menu Option for All Access</shortDescription>
+        <value>Show all access</value>
+    </labels>
+    <labels>
+        <fullName>validatorActionMenuMissingAccessOnly</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the Permissions Validator Action Menu Option for Missing Access Only</shortDescription>
+        <value>Show only missing access</value>
+    </labels>
+    <labels>
+        <fullName>validatorActionMenuTitle</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the Permissions Validator Action Menu</shortDescription>
+        <value>Actions</value>
+    </labels>
+    <labels>
+        <fullName>validatorDescription</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Description for the Permissions Validator</shortDescription>
+        <value>This tool validates that the combination of the selected Profile, Permission Sets, and Permission Set Groups have the necessary minimum requirements for defined features.</value>
+    </labels>
+    <labels>
+        <fullName>validatorDescriptionAll</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for when the validator will show all permissions</shortDescription>
+        <value>All required permissions will be displayed when the validation is run.</value>
+    </labels>
+    <labels>
+        <fullName>validatorDescriptionMissingOnly</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for when the validator will show only missing permissions</shortDescription>
+        <value>Only metadata with missing permissions will be displayed when the validation is done.</value>
+    </labels>
+    <labels>
+        <fullName>validatorRunButton</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for Run Button Label</shortDescription>
+        <value>Run</value>
+    </labels>
+    <labels>
+        <fullName>validatorRunCompleteDescription</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for toast description when permission validation is completed</shortDescription>
+        <value>Permission validation is complete.</value>
+    </labels>
+    <labels>
+        <fullName>validatorRunCompleteTitle</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for toast title when permission validation is completed</shortDescription>
+        <value>Validation Complete</value>
+    </labels>
+    <labels>
+        <fullName>validatorRunButtonTitle</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for Run Button Title</shortDescription>
+        <value>Runs the Permissions Validator for the selected profile</value>
+    </labels>
+    <labels>
+        <fullName>validatorTabPermissionSetGroups</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the Permission Set Groups Tab</shortDescription>
+        <value>Permission Set Groups</value>
+    </labels>
+    <labels>
+        <fullName>validatorTabPermissionSets</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the Permission Sets Tab</shortDescription>
+        <value>Permission Sets</value>
+    </labels>
+    <labels>
+        <fullName>validatorTabProfile</fullName>
+        <categories>Validator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text for the Profile Tab</shortDescription>
+        <value>Profile</value>
+    </labels>
+</CustomLabels>

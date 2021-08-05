@@ -1,0 +1,79 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-m-small slds-size_full">
+            <lightning-card title={labelReference.cardTitle}>
+                <template if:true={showError}>
+                    <c-error-display error={error}> </c-error-display>
+                </template>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                        {labelReference.cardDescription}
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-p-left_small slds-p-right_small" aria-live="polite">
+                        {runModeDescription}
+                    </div>
+                </div>
+                <div slot="actions">
+                    <lightning-button-menu
+                        title={labelReference.actionMenuTitle}
+                        menu-alignment="right"
+                        nubbin
+                        onselect={handleActionMenuSelect}
+                    >
+                        <lightning-menu-item
+                            value="onlyMissingAccess"
+                            label={labelReference.actionMenuOptionAllMode}
+                            checked={showOnlyMissingAccess}
+                            disabled={showOnlyMissingAccess}
+                        ></lightning-menu-item>
+                        <lightning-menu-item
+                            value="allAccess"
+                            label={labelReference.actionMenuOptionMissingMode}
+                            checked={showAllAccess}
+                            disabled={showAllAccess}
+                        ></lightning-menu-item>
+                        <lightning-menu-item
+                            value="runPermissionsValidator"
+                            label={labelReference.runButtonLabel}
+                            disabled={runButtonDisabled}
+                        ></lightning-menu-item>
+                    </lightning-button-menu>
+                </div>
+            </lightning-card>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-size_full">
+            <lightning-card>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                        <c-permission-selector
+                            onpermissionsetselected={handlePermissionSetSelected}
+                            onpermissionsetgroupselected={handlePermissionSetGroupSelected}
+                            onprofileselected={handleProfileSelected}
+                        >
+                        </c-permission-selector>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-grid_align-center">
+                                <lightning-button
+                                    variant="brand-outline"
+                                    label={labelReference.runButtonLabel}
+                                    title={labelReference.runButtonTitle}
+                                    disabled={runButtonDisabled}
+                                    onclick={handleRunClick}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-size_full">
+            <template if:true={showResultsIterator}>
+                <c-results-iterator view-model={iteratorViewModel} onresultdataloaded={resultDataLoadedHandler}>
+                </c-results-iterator>
+            </template>
+        </div>
+    </div>
+</template>

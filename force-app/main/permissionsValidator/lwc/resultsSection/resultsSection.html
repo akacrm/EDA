@@ -1,0 +1,43 @@
+<template>
+    <li>
+        <lightning-card icon-name={cardIcon}>
+            <h3 slot="title">
+                <span class="slds-assistive-text" id="cardTitleA11yText">{cardTitleA11yText}</span>
+                {featureName}
+            </h3>
+            <template if:true={showError}>
+                <c-error-display error={error}> </c-error-display>
+            </template>
+            <template if:false={dataLoaded}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </template>
+            <template if:true={dataLoaded}>
+                <div class="slds-grid slds-wrap">
+                    <template if:false={accessMissing}>
+                        <div class="slds-column slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                            {labelReference.accessMetDescription}
+                        </div>
+                    </template>
+                    <template if:true={accessMissing}>
+                        <div class="slds-column slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                            {labelReference.accessMissingDescription}
+                        </div>
+                    </template>
+                    <template if:true={showTable}>
+                        <div class="slds-column slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                            <lightning-datatable
+                                key-field="id"
+                                data={viewModel.tableData}
+                                columns={columns}
+                                column-widths-mode="auto"
+                                min-column-width={minColumnWidth}
+                                hide-checkbox-column
+                            >
+                            </lightning-datatable>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </lightning-card>
+    </li>
+</template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metadata_Type__c</fullName>
+    <description>The type of metadata to apply the changes to such as Apex Class, Permission, SObject, SObjectField, or Record Type.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The type of metadata to apply the changes to such as Apex Class, Permission, SObject, SObjectField, or Record Type.</inlineHelpText>
+    <label>Metadata Type</label>
+    <length>32</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
