@@ -191,4 +191,76 @@ private class PermissionSetMapper_TEST {
             return [SELECT Id, name, label FROM PermissionSet];
         }
     }
+
+    /**************************************************************************************************************************
+     * @description Test method to verify that the checkPermissionSetsWithCustomizeApplicationFromIds method returns true
+     * if any provided permission set has access to view setup
+     * TODO: Commented out because PermissionsManageTranslation failing beta builds and downstream packages.
+     ***************************************************************************************************************************/
+    /*@isTest
+    private static void checkPermissionSetsWithCustomizeApplicationFromIdsTrue() {
+        List<PermissionSet> permissionSets = new List<PermissionSet>();
+        for (Integer i = 0; i < 5; i++) {
+            PermissionSet permissionSet = new PermissionSet(
+                PermissionsCustomizeApplication = false,
+                Name = 'testName' + i,
+                Label = 'testLabel' + i
+            );
+            permissionSets.add(permissionSet);
+        }
+        permissionSets[0].PermissionsViewSetup = true;
+        permissionSets[0].PermissionsViewRoles = true;
+        permissionSets[0].PermissionsManageCustomPermissions = true;
+        permissionSets[0].PermissionsManageTranslation = true;
+        permissionSets[0].PermissionsCustomizeApplication = true;
+        insert permissionSets;
+
+        Test.startTest();
+        Set<Id> permissionSetIdsSet = new Set<Id>();
+        for (PermissionSet permissionSet : permissionSets) {
+            permissionSetIdsSet.add(permissionSet.Id);
+        }
+        Boolean permissionSetsWithCustomizeApplication = PermissionSetMapper.getInstance()
+            .checkPermissionSetsWithCustomizeApplicationFromIds(permissionSetIdsSet);
+        Test.stopTest();
+
+        System.assertEquals(
+            true,
+            permissionSetsWithCustomizeApplication,
+            'Some of the provided permission sets should have access to view setup'
+        );
+    }*/
+
+    /**************************************************************************************************************************
+     * @description Test method to verify that the checkPermissionSetsWithCustomizeApplicationFromIds method returns false
+     * if no provided permission set has access to view setup
+     ***************************************************************************************************************************/
+    @isTest
+    private static void checkPermissionSetsWithCustomizeApplicationFromIdsFalse() {
+        List<PermissionSet> permissionSets = new List<PermissionSet>();
+        for (Integer i = 0; i < 5; i++) {
+            PermissionSet permissionSet = new PermissionSet(
+                PermissionsCustomizeApplication = false,
+                Name = 'testName' + i,
+                Label = 'testLabel' + i
+            );
+            permissionSets.add(permissionSet);
+        }
+        insert permissionSets;
+
+        Test.startTest();
+        Set<Id> permissionSetIdsSet = new Set<Id>();
+        for (PermissionSet permissionSet : permissionSets) {
+            permissionSetIdsSet.add(permissionSet.Id);
+        }
+        Boolean permissionSetsWithCustomizeApplication = PermissionSetMapper.getInstance()
+            .checkPermissionSetsWithCustomizeApplicationFromIds(permissionSetIdsSet);
+        Test.stopTest();
+
+        System.assertEquals(
+            false,
+            permissionSetsWithCustomizeApplication,
+            'None of the provided permission sets should have access to view setup'
+        );
+    }
 }

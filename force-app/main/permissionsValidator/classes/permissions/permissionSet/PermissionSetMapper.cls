@@ -65,4 +65,22 @@ public virtual with sharing class PermissionSetMapper {
         SecurityService.getInstance().assertViewSetupPermissionForCurrentUser();
         return [SELECT Id, name, label FROM PermissionSet WHERE PermissionSetGroupId IN :permissionSetGroupIds];
     }
+
+    /*****************************************************************************
+     * @description Check if provided Permission set has access to view Setup.
+     * @param permissionSetIds A set of Permission set ids.
+     * @return If provided permission set has access to view Setup.
+     ******************************************************************************/
+    public virtual Boolean checkPermissionSetsWithCustomizeApplicationFromIds(Set<Id> permissionSetIdsSet) {
+        List<PermissionSet> permissionSets = [
+            SELECT Id
+            FROM PermissionSet
+            WHERE Id IN :permissionSetIdsSet AND PermissionsCustomizeApplication = TRUE
+        ];
+        if (permissionSets.isEmpty() == false) {
+            return true;
+        }
+
+        return false;
+    }
 }
