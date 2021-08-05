@@ -1,0 +1,14 @@
+<template>
+    <template if:true={showError}>
+        <c-error-display error={error}> </c-error-display>
+    </template>
+    <c-single-lookup
+        label="Select a user (mocked)"
+        disabled={disableLookup}
+        placeholder="Search..."
+        required="true"
+        remove-label="removeLabel"
+        onsearch={handleSearch}
+        oninputchange={handleInputChange}
+    ></c-single-lookup>
+</template>

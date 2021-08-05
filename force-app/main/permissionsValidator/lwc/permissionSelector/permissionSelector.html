@@ -9,16 +9,6 @@
         <lightning-tab label={labelReference.permissionSetGroupsTab}>
             <c-permission-set-group-selector></c-permission-set-group-selector>
         </lightning-tab>
-        <lightning-tab label="User">
-            <c-single-lookup
-                label="Select a user"
-                disabled={disableLookup}
-                placeholder="Search..."
-                required="true"
-                remove-label="removeLabel"
-                onsearch={handleSearch}
-                oninputchange={handleInputChange}
-            ></c-single-lookup>
-        </lightning-tab>
+        <lightning-tab label="User"> <c-user-selector></c-user-selector></lightning-tab>
     </lightning-tabset>
 </template>
