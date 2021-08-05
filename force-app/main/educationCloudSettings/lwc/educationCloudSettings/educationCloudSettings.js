@@ -38,6 +38,7 @@ import SystemModstamp from "@salesforce/schema/Account.SystemModstamp";
 
 const HealthCheckContainerComponentName = "HealthCheckContainer";
 const ReleaseManagementContainerComponentName = "releaseManagementContainer";
+const PermissionsValidatorComponentName = "permissionsValidatorContainer";
 
 const EDADocumentationUrl = "https://powerofus.force.com/s/article/EDA-Documentation";
 const EDATrailheadUrl = "https://trailhead.salesforce.com/en/content/learn/trails/highered_heda";
@@ -71,6 +72,10 @@ export default class EducationCloudSettings extends NavigationMixin(LightningEle
         return this.edaComponentNavigationPrefix + HealthCheckContainerComponentName;
     }
 
+    get permissionsValidatorComponentNavigation() {
+        return this.edaComponentNavigationPrefix + PermissionsValidatorComponentName;
+    }
+
     get releaseManagementContainerComponentNavigation() {
         return this.edaComponentNavigationPrefix + ReleaseManagementContainerComponentName;
     }
@@ -83,15 +88,15 @@ export default class EducationCloudSettings extends NavigationMixin(LightningEle
             data.forEach((prodRegistry) => {
                 let prodRegistrySerialized = JSON.stringify(prodRegistry);
                 getEDCSettingsProductVModel({ productRegistry: prodRegistrySerialized })
-                .then((result) => {
-                    if (result) {
-                        this.edcProductModels.push(result);
-                        this.edcProductModels.sort(this.sortByNameAsc);
-                    }
-                })
-                .catch((error) => {
-                    this.showErrorToast(error);
-                });
+                    .then((result) => {
+                        if (result) {
+                            this.edcProductModels.push(result);
+                            this.edcProductModels.sort(this.sortByNameAsc);
+                        }
+                    })
+                    .catch((error) => {
+                        this.showErrorToast(error);
+                    });
             });
         } else if (error) {
             this.showErrorToast(error);
@@ -107,6 +112,15 @@ export default class EducationCloudSettings extends NavigationMixin(LightningEle
             buttonTitle: stgHealthCheckA11y,
             navigationType: "standard__component",
             navigationTarget: this.healthCheckContainerComponentNavigation,
+        },
+        {
+            title: "Permissions Validator",
+            description: "Validates permissions for SObject, SObject Field, and Apex Class access.",
+            iconName: "custom:custom94",
+            buttonLabel: "Go to Permissions Validator",
+            buttonTitle: stgHealthCheckA11y,
+            navigationType: "standard__component",
+            navigationTarget: this.permissionsValidatorComponentNavigation,
         },
     ];
 
@@ -135,22 +149,22 @@ export default class EducationCloudSettings extends NavigationMixin(LightningEle
     ];
 
     showErrorToast(error) {
-        let errorMessage = 'Unknown error';
+        let errorMessage = "Unknown error";
         if (Array.isArray(error.body)) {
-            errorMessage = error.body.map(e => e.message).join(', ');
+            errorMessage = error.body.map((e) => e.message).join(", ");
         } else {
-            if (error.body && typeof error.body.message === 'string') {
+            if (error.body && typeof error.body.message === "string") {
                 errorMessage = error.body.message;
             } else {
-                errorMessage = error.message;     
+                errorMessage = error.message;
             }
         }
 
         const evt = new ShowToastEvent({
-            title: 'Error',
+            title: "Error",
             message: errorMessage,
-            variant: 'error',
-            mode: 'sticky'
+            variant: "error",
+            mode: "sticky",
         });
         this.dispatchEvent(evt);
     }
@@ -158,9 +172,9 @@ export default class EducationCloudSettings extends NavigationMixin(LightningEle
     sortByNameAsc(a, b) {
         if (a.name > b.name) {
             return 1;
-          }
+        }
         if (a.name === b.name) {
-          return 0;
+            return 0;
         }
         return -1;
     }
